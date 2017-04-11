@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"> 
+<head>
+<script>
+function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false) 
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        return true;
+}
+</script>
+
+
+   <meta charset="utf-8">
+	<title>Shravan Panicker</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+   <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+	<script src="js/modernizr.js"></script>
+
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+  
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li ><a href="ShravanWTindex.html">Home</a></li>
+            <li><a  href="about.html">About</a></li>
+           <li><a  href="resume.html">Resume</a></li>
+            <li class="current"><a  href="contact.html">Contact</a></li>
+         </ul> 
+
+      </nav> 
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">I'm Shravan Panicker</h1>
+            <h3>I'm a New York based graduate student, currently pursuing <span>Masters in Information Systems (Business Analytics). </span>Completed B.Tech in <span>Electrical and Electronic Engineering</span>.  
+            </h3>
+            <hr />
+            
+         </div>
+      </div>
+
+
+   </header>
+   
+   <section id="contact">
+
+         <div class="row section-head">
+
+            <div class="two columns header-col">
+
+               <h1><span>Get In Touch.</span></h1>
+
+            </div>
+
+            <div class="ten columns">
+
+
+            </div>
+
+         </div>
+
+         <div class="row">
+
+            <div class="eight columns">
+
+               
+               <form action="https://formspree.io/shrvn.pnckr0961@gmail.com" method="POST">
+					<fieldset>
+
+                  <div>
+						   <label for="contactName">Name <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactName" name="contactName">
+                  </div>
+
+                  <div>
+						   <label for="contactEmail">Email <span class="required" onblur="validateEmail(this);">*</span></label>
+						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                  </div>
+
+                  <div>
+						   <label for="contactSubject">Subject</label>
+						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+                  </div>
+
+                  <div>
+                     <label for="contactMessage">Message <span class="required">*</span></label>
+                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                  </div>
+
+                  <div>
+                  <label for="contactMessage">Reason of Contact
+                     <select id="RoC" name="Reason of Contact"></select> </br>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+          <script >
+              var $select = $('#RoC');
+              $.getJSON('data.json', function(data){
+                
+
+                for (var i = 0; i < data['RoC'].length; i++) {
+                 $select.append('<option id="' + data['RoC'][i]['id'] + '">' + data['RoC'][i]['name'] + '</option>');
+                 }
+              });
+          </script>
+            </br>
+                  </div>
+
+                  <div>
+                     <button class="submit" value="Send">Submit</button>
+                     <span id="image-loader">
+                        <img alt="" src="images/loader.gif">
+                     </span>
+                  </div>
+
+					</fieldset>
+				   </form> 
+               <div id="message-warning"> Error boy</div>
+               
+				   <div id="message-success">
+                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+				   </div>
+
+            </div>
+
+
+            <aside class="four columns footer-widgets">
+
+               <div class="widget widget_contact">
+
+					   <h4>Address and Phone</h4>
+					   <p class="address">
+						   Shravan Panicker<br>
+						   99 Delafied Street<br>
+						   poughkeepsie, NY 12601, US<br>
+						   <span>(845) 546-2593</span>
+					   </p>
+
+				   </div>
+
+               
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+
+</body>
+
+</html>
